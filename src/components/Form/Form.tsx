@@ -9,18 +9,17 @@ export const Form = (props: {
     } = props;
 
     const [text, setText] = useState<string>('');
-    const formSubmit = () => {
-        if (text) {
+    const formSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        if (text.trim()) {
             addTask(text);
         }
         setText('');
     };
 
-
-
     return (
         <div className={`container ${styles['form-add-task']}`}>
-            <form action="#" onSubmit={formSubmit}>
+            <form onSubmit={formSubmit}>
                 <div className={styles['form-add-task__input-wrapper']}>
                     <input type="text"
                            className={styles['form-add-task__input']}

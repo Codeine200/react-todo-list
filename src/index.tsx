@@ -4,7 +4,6 @@ import './assets/styles/reset.css';
 import './assets/styles/main.css';
 import reportWebVitals from './reportWebVitals';
 import {ToDoListPage} from "./pages/ToDoListPage";
-import {BrowserRouter, Route, Routes} from "react-router-dom";
 import {ToastProvider} from "./providers/Toast";
 
 const root = ReactDOM.createRoot(
@@ -13,11 +12,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
       <ToastProvider>
-          <BrowserRouter>
-              <Routes>
-                  <Route path='/' element={<ToDoListPage />}></Route>
-              </Routes>
-          </BrowserRouter>
+          <ToDoListPage />
       </ToastProvider>
   </React.StrictMode>
 );
