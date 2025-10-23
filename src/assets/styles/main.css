@@ -1,4 +1,5 @@
-body {
+html, body {
+    height: 100%;
     background-color: #02050a;
     color: #f5f8ff;
     padding: 10px;
